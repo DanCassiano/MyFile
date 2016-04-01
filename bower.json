@@ -1,18 +1,21 @@
 {
-	"name":"file",
-	"description":"File",
-	"main":"index.php",
-	"authors":[
-		"jordan Cassiano"
-	],
-	"license":"MIT",
-	"moduleType":[],
-	"homepage":"",
-	"ignore":[
-	"**/.*",
-	"node_modules",
-	"bower_components",
-	"test",
-	"tests"
-	]
+  "name": "file",
+  "description": "File",
+  "main": "index.php",
+  "authors": [
+    "jordan Cassiano"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  }
 }

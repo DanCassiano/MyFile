@@ -44,17 +44,32 @@ module.exports = function(grunt){
 				files: "src/js/main.js",
 				"tasks":"js"
 			}
+		},
+
+		// browser Sync
+		browserSync: {
+			default_options: {
+				bsFiles: {
+					src : [
+						'dist/js/file.min.js',
+						'*.php'
+					]
+				},
+				options: {
+					watchTask: true,
+					proxy: "localhost/MyFile"
+				}
+			}
 		}
-
-
 	});
 
 	// load plugins
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-browser-sync');
 
 	//  Tasks
 	grunt.registerTask("js",["jshint::all", "uglify"]);
-	
+	grunt.registerTask('default', ['browserSync', 'watch']);
 }
